@@ -1,0 +1,8 @@
+<h1>My Page</h1>
+
+<p>Name: <%= current_user.name %></p>
+<p>Email: <%= current_user.email %></p>
+
+<%= link_to "Top Page", root_path %>
+
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>

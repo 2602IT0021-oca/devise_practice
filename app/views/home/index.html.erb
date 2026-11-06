@@ -1,0 +1,9 @@
+<h1>Top Page</h1>
+
+<% if user_signed_in? %>
+  <p>Welcome, <%= current_user.name %>!</p>
+  <%= link_to "My Page", mypage_path %>
+<% else %>
+  <%= link_to "Sign Up", new_user_registration_path %>
+  <%= link_to "Login", new_user_session_path %>
+<% end %>
